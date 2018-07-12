@@ -1,0 +1,523 @@
+2018-07-12 22:41:39 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BloombergMarketsNews)
+2018-07-12 22:41:39 [scrapy.utils.log] INFO: Versions: lxml 3.6.4.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 16.2.0 (OpenSSL 1.0.2j  26 Sep 2016), cryptography 1.5, Platform Windows-10-10.0.17134-SP0
+2018-07-12 22:41:39 [scrapy.crawler] INFO: Overridden settings: {'SPIDER_MODULES': ['BloombergMarketsNews.spiders'], 'BOT_NAME': 'BloombergMarketsNews', 'LOG_FILE': 'log1', 'DOWNLOAD_DELAY': 1, 'USER_AGENT': 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)', 'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'BloombergMarketsNews.spiders'}
+2018-07-12 22:41:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats']
+2018-07-12 22:41:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-07-12 22:41:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-07-12 22:41:39 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-07-12 22:41:39 [scrapy.core.engine] INFO: Spider opened
+2018-07-12 22:41:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-07-12 22:41:39 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-07-12 22:41:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/robots.txt> (referer: None)
+2018-07-12 22:41:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/feeds/markets/sitemap_index.xml> (referer: None)
+2018-07-12 22:41:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/feeds/markets/sitemap_recent.xml> (referer: https://www.bloomberg.com/feeds/markets/sitemap_index.xml)
+2018-07-12 22:41:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/run-up-to-u-s-recession-may-be-good-time-for-emerging-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/run-up-to-u-s-recession-may-be-good-time-for-emerging-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-cfpb-deputy-to-guide-crypto-firms-through-regulatory-thicket> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-cfpb-deputy-to-guide-crypto-firms-through-regulatory-thicket> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/trade-war-fallout-mapped-in-commodity-gauges-from-soy-to-copper> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/trade-war-fallout-mapped-in-commodity-gauges-from-soy-to-copper> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/turk-economy-czar-sees-curbing-inflation-top-priority-aa-says> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/turk-economy-czar-sees-curbing-inflation-top-priority-aa-says> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/south-african-central-bank-on-a-rand-tightrope-commerzbank-says> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/south-african-central-bank-on-a-rand-tightrope-commerzbank-says> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/hydro-one-ceo-to-retire-as-ontario-s-ford-shakes-up-utility> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/hydro-one-ceo-to-retire-as-ontario-s-ford-shakes-up-utility> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-k-s-may-drops-call-for-easy-access-by-banks-to-eu-s-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-k-s-may-drops-call-for-easy-access-by-banks-to-eu-s-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/the-new-entry-point-for-american-luxury-home-buyers-1-million> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/the-new-entry-point-for-american-luxury-home-buyers-1-million> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-raises-odds-of-el-nino-this-year-to-roil-weather-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-raises-odds-of-el-nino-this-year-to-roil-weather-markets> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-consumer-prices-rise-less-than-forecast-as-hotel-rates-fall> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-consumer-prices-rise-less-than-forecast-as-hotel-rates-fall> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/bond-traders-now-betting-rate-cut-just-as-likely-as-hike-in-2020> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-jobless-claims-fall-to-two-month-low-amid-july-4-holiday> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:41:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/bond-traders-now-betting-rate-cut-just-as-likely-as-hike-in-2020> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:41:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-jobless-claims-fall-to-two-month-low-amid-july-4-holiday> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-barclays-trader-guilty-of-euribor-rigging-as-jury-dismissed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-barclays-trader-guilty-of-euribor-rigging-as-jury-dismissed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/asia-stocks-set-for-mixed-start-oil-plunges-markets-wrap> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/asia-stocks-set-for-mixed-start-oil-plunges-markets-wrap> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/indonesia-reaches-preliminary-deal-with-freeport-on-grasberg-jji3ehey> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/indonesia-reaches-preliminary-deal-with-freeport-on-grasberg-jji3ehey> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:04 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-07-12 22:42:04 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-07-12 22:42:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/trade-war-kills-currency-volatility-leaves-analysts-flummoxed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/trade-war-kills-currency-volatility-leaves-analysts-flummoxed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:05 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2018-07-12 22:42:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/china-s-commerce-ministry-alters-regular-press-conference-time> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:14 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BloombergMarketsNews)
+2018-07-12 22:42:14 [scrapy.utils.log] INFO: Versions: lxml 3.6.4.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 16.2.0 (OpenSSL 1.0.2j  26 Sep 2016), cryptography 1.5, Platform Windows-10-10.0.17134-SP0
+2018-07-12 22:42:14 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'BloombergMarketsNews.spiders', 'DOWNLOAD_DELAY': 1, 'SPIDER_MODULES': ['BloombergMarketsNews.spiders'], 'BOT_NAME': 'BloombergMarketsNews', 'USER_AGENT': 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)', 'ROBOTSTXT_OBEY': True, 'LOG_FILE': 'log1'}
+2018-07-12 22:42:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-07-12 22:42:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-07-12 22:42:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-07-12 22:42:15 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-07-12 22:42:15 [scrapy.core.engine] INFO: Spider opened
+2018-07-12 22:42:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-07-12 22:42:15 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-07-12 22:42:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/robots.txt> (referer: None)
+2018-07-12 22:42:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/feeds/markets/sitemap_index.xml> (referer: None)
+2018-07-12 22:42:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/feeds/markets/sitemap_recent.xml> (referer: https://www.bloomberg.com/feeds/markets/sitemap_index.xml)
+2018-07-12 22:42:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-consumer-prices-rise-less-than-forecast-as-hotel-rates-fall> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:21 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-consumer-prices-rise-less-than-forecast-as-hotel-rates-fall> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-jobless-claims-fall-to-two-month-low-amid-july-4-holiday> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/u-s-jobless-claims-fall-to-two-month-low-amid-july-4-holiday> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/bond-traders-now-betting-rate-cut-just-as-likely-as-hike-in-2020> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/bond-traders-now-betting-rate-cut-just-as-likely-as-hike-in-2020> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-barclays-trader-guilty-of-euribor-rigging-as-jury-dismissed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/ex-barclays-trader-guilty-of-euribor-rigging-as-jury-dismissed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/asia-stocks-set-for-mixed-start-oil-plunges-markets-wrap> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/asia-stocks-set-for-mixed-start-oil-plunges-markets-wrap> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/indonesia-reaches-preliminary-deal-with-freeport-on-grasberg-jji3ehey> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/indonesia-reaches-preliminary-deal-with-freeport-on-grasberg-jji3ehey> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/five-things-you-need-to-know-to-start-your-day> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/five-things-you-need-to-know-to-start-your-day> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/eu-s-anti-migrant-bloc-to-get-boost-as-czech-mogul-cements-power> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/eu-s-anti-migrant-bloc-to-get-boost-as-czech-mogul-cements-power> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/turkey-lira-rebounds-from-record-as-retail-traders-buy-into-dips> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/turkey-lira-rebounds-from-record-as-retail-traders-buy-into-dips> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-11/trade-war-kills-currency-volatility-leaves-analysts-flummoxed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-11/trade-war-kills-currency-volatility-leaves-analysts-flummoxed> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/surge-in-hacked-credit-card-information-offered-for-sale-on-web> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/surge-in-hacked-credit-card-information-offered-for-sale-on-web> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bloomberg.com/news/articles/2018-07-12/pakistan-minister-says-ex-pm-sharif-will-be-arrested-at-airport> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+2018-07-12 22:42:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.bloomberg.com/news/articles/2018-07-12/pakistan-minister-says-ex-pm-sharif-will-be-arrested-at-airport> (referer: https://www.bloomberg.com/feeds/markets/sitemap_recent.xml)
+Traceback (most recent call last):
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\duxin\anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\duxin\Codes\source\BloombergMarketsNews\BloombergMarketsNews\spiders\newslist.py", line 29, in parse2
+    requestURL = response.meta['url']
+KeyError: 'url'
+2018-07-12 22:42:35 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-07-12 22:42:35 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-07-12 22:42:35 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
